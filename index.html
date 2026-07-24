@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Evasio — Travel Planner & créatrice de road trips sur mesure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="logo">
+      <span class="mark"><img src="logo.png" alt="Go Evasio logo"></span>
+      <span>Go <span class="script-accent">Evasio</span><span class="tag">Travel Planner</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="offres.html">Offres</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="qui-suis-je.html">Qui suis-je ?</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn-nav">Organiser mon voyage</a>
+    </nav>
+    <button class="burger" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#6E2A24" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="eyebrow">Travel Planner & créatrice de road trips</span>
+      <h1>Ton voyage commence <span style="color:var(--terracotta); font-style:italic;">bien avant</span> le départ.</h1>
+      <p class="lede">Je transforme ton idée de voyage en un road trip fluide, optimisé et inoubliable — itinéraires sur mesure, USA & Europe, pensés comme des histoires.</p>
+      <div class="hero-cta-row">
+        <a href="offres.html" class="btn btn-primary">Découvrir les offres</a>
+        <a href="qui-suis-je.html" class="btn btn-ghost">Qui suis-je ?</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10 ans</strong><span>d'expertise tourisme</span></div>
+        <div><strong>USA · EU</strong><span>terrain vécu</span></div>
+        <div><strong>4 packs</strong><span>selon ta durée</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="hero-accueil.jpg" alt="Go Evasio — road trip sur mesure">
+    </div>
+  </div>
+</section>
+
+<!-- PILIERS -->
+<section class="bg-white">
+  <div class="container">
+    <span class="eyebrow center" style="display:block;">Ce que je crée pour toi</span>
+    <h2 class="center" style="margin: 14px auto 50px; max-width:640px;">un voyage qui te ressemble : pensé selon tes envies, optimisé dans les moindres détails et respectueux de ton budget.</h2>
+    <div class="grid-4">
+      <div class="pillar-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12L21 4L13 22L11 13L3 12Z" stroke="#6E2A24" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Itinéraires sur mesure</h3>
+        <p>Construis selon ta durée, ton budget et ton rythme — pas un template générique.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" stroke="#6E2A24" stroke-width="1.6"/><path d="M8 13h8M8 17h5" stroke="#6E2A24" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Roadbook complet</h3>
+        <p>Un carnet PDF clair avec hébergements, trajets et activités, prêt à suivre.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z" stroke="#6E2A24" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#6E2A24" stroke-width="1.6"/></svg></div>
+        <h3>Expertise terrain</h3>
+        <p>USA & Europe vécues, pas seulement vues sur Pinterest ou Instagram.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8" stroke="#6E2A24" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Zéro stress</h3>
+        <p>Tu remplis un questionnaire, je m'occupe du reste. Tu n'as plus qu'à partir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APERÇU OFFRES (route timeline) -->
+<section class="bg-sable">
+  <div class="container">
+    <span class="eyebrow">Une offre, 4 durées</span>
+    <h2 style="margin:14px 0 12px;">Choisis ton pack selon le temps de ton évasion</h2>
+    <p class="lede" style="margin-bottom:60px;">D'une escapade de 2 nuits au road trip de plus de 15 jours, chaque pack est calibré pour son temps de voyage.</p>
+
+    <div class="route-track">
+      <div class="route-stops">
+        <div class="stop">
+          <div class="stop-pin">2-3</div>
+          <h4>Escapade</h4>
+          <p style="font-size:0.85rem; color:var(--ink-soft);">Dès 59€</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">4-5</div>
+          <h4>Road Break</h4>
+          <p style="font-size:0.85rem; color:var(--ink-soft);">Dès 129€</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">6-7</div>
+          <h4>Road Journey</h4>
+          <p style="font-size:0.85rem; color:var(--ink-soft);">Dès 199€</p>
+        </div>
+        <div class="stop">
+          <div class="stop-pin">8+</div>
+          <h4>Odyssey</h4>
+          <p style="font-size:0.85rem; color:var(--ink-soft);">Dès 399€</p>
+        </div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:50px;">
+      <a href="offres.html" class="btn btn-primary">Voir le détail des 4 packs</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bg-white">
+  <div class="container">
+    <span class="eyebrow">Comment ça marche</span>
+    <h2 style="margin:14px 0 50px;">De ton idée à ton roadbook, en 5 étapes</h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h4>Tu choisis ton pack</h4><p>Selon la durée de ton séjour.</p></div>
+      <div class="step"><div class="num">02</div><h4>Tu remplis le questionnaire</h4><p>Tes envies, ton budget, ton rythme.</p></div>
+      <div class="step"><div class="num">03</div><h4>Je construis ton road trip</h4><p>Itinéraire, hébergements, activités.</p></div>
+      <div class="step"><div class="num">04</div><h4>Tu reçois ton roadbook</h4><p>PDF clair, prêt à suivre.</p></div>
+      <div class="step"><div class="num">05</div><h4>Tu pars</h4><p>L'esprit léger, sans détour inutile.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE D'INSPIRATION -->
+<section class="bg-white">
+  <div class="container">
+    <span class="eyebrow">Inspiration</span>
+    <h2 style="margin:14px 0 12px;">Des destinations faites pour le road trip</h2>
+    <p class="lede" style="margin-bottom:40px;">USA, Portugal, Italie, Norvège, Écosse, Espagne… Autant de pays où la plus belle façon de voyager, c'est de prendre la route. En famille avec les enfants, entre amis, en couple ou sac au dos : choisis l'endroit qui te fait rêver, je transforme l'envie en itinéraire sur mesure.</p>
+    <div class="gallery-grid">
+      <figure class="wide tall">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=82" alt="Van vintage sur une route au cœur des grands espaces de l'Ouest américain" loading="lazy">
+        <figcaption><span class="place">États-Unis</span>Parcs mythiques et routes infinies : la grande aventure rêvée, idéale pour un premier road trip en famille.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=700&q=82" alt="Quais colorés et bateaux traditionnels de Porto au Portugal" loading="lazy">
+        <figcaption><span class="place">Portugal</span>De Porto à l'Algarve, villages colorés et pauses gourmandes : l'évasion douce, parfaite à deux ou entre amis.</figcaption>
+      </figure>
+      <figure class="tall">
+        <img src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=700&q=82" alt="Village coloré des Cinque Terre accroché à la falaise face à la mer en Italie" loading="lazy">
+        <figcaption><span class="place">Italie</span>Cinque Terre, Toscane, dolce vita : on roule d'un village à l'autre, le cœur léger et l'appétit ouvert.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1601439678777-b2b3c56fa627?auto=format&fit=crop&w=700&q=82" alt="Fjord norvégien encaissé entre des montagnes verdoyantes avec un bateau" loading="lazy">
+        <figcaption><span class="place">Norvège</span>Fjords, cascades et nuits claires : un grand bol de nature qui se savoure en couple comme sac au dos.</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=1100&q=82" alt="Skyline d'Édimbourg au coucher du soleil en Écosse" loading="lazy">
+        <figcaption><span class="place">Écosse</span>Châteaux, lochs et routes brumeuses des Highlands : l'aventure qui rapproche, entre amis comme en famille.</figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1509840841025-9088ba78a826?auto=format&fit=crop&w=700&q=82" alt="Cathédrale et Giralda de Séville baignées de lumière dorée en Espagne" loading="lazy">
+        <figcaption><span class="place">Espagne</span>Du soleil de Séville aux criques cachées, des kilomètres de bonne humeur pour petits et grands.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES -->
+<section class="bg-sable">
+  <div class="container">
+    <span class="eyebrow">Ils ont voyagé avec Go Evasio</span>
+    <h2 style="margin:14px 0 50px;">Découvrez pourquoi mes voyageurs me font confiance pour organiser leurs aventures</h2>
+    <div class="grid-3">
+      <div class="quote-card">
+        <p>"J'avais 10 onglets ouverts et zéro décision prise. Céline a toujours été à l'écoute et a su s'adapter à nos demandes : en quelques jours j'avais un itinéraire complet, logique, et adapté à mon budget."</p>
+        <div class="quote-by"><span class="av"></span> Camille, Road Journey USA</div>
+      </div>
+      <div class="quote-card">
+        <p>"Le roadbook était hyper clair, jour par jour. On a gagné un temps fou sur place, plus aucune hésitation sur les trajets."</p>
+        <div class="quote-by"><span class="av"></span> Julien & Sarah, Odyssey USA</div>
+      </div>
+      <div class="quote-card">
+        <p>"Pour un simple week-end, je ne pensais pas avoir besoin d'aide. Résultat : on a découvert des spots qu'on n'aurait jamais trouvés seuls."</p>
+        <div class="quote-by"><span class="av"></span> Inès, Escapade Europe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Prêt(e) à transformer ton idée de voyage en itinéraire réel ?</h2>
+        <p>Choisis ton pack selon la durée de ton séjour et commence ton road trip sur mesure.</p>
+      </div>
+      <a href="contact.html" class="btn btn-light">Démarrer mon voyage</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Go Evasio</div>
+        <p style="font-size:0.88rem; color:#b8c4d1; max-width:30ch;">Road trips & itinéraires sur mesure. USA · Europe · expériences authentiques.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="offres.html">Offres</a></li>
+          <li><a href="qui-suis-je.html">Qui suis-je ?</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Packs</h4>
+        <ul>
+          <li><a href="offres.html#escapade">Escapade</a></li>
+          <li><a href="offres.html#road-break">Road Break</a></li>
+          <li><a href="offres.html#road-journey">Road Journey</a></li>
+          <li><a href="offres.html#odyssey">Odyssey</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:goevasiotravel@gmail.com">goevasiotravel@gmail.com</a></li>
+          <li><a href="https://instagram.com/goevasiotravel" target="_blank" rel="noopener">Instagram @goevasiotravel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Go Evasio. Tous droits réservés.</span>
+      <span><a href="cgv.html" style="color:#9fb0c2;">CGV</a> · Créatrice de road trips sur mesure</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

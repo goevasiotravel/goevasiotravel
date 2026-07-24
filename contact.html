@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Go Evasio | Organise ton voyage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a href="index.html" class="logo">
+      <span class="mark"><img src="logo.png" alt="Go Evasio logo"></span>
+      <span>Go <span class="script-accent">Evasio</span><span class="tag">Travel Planner</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="offres.html">Offres</a>
+      <a href="ebooks.html">E-books</a>
+      <a href="qui-suis-je.html">Qui suis-je ?</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="btn-nav">Organiser mon voyage</a>
+    </nav>
+    <button class="burger" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="#6E2A24" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:30px;">
+  <div class="container" style="max-width:700px;">
+    <span class="eyebrow">Organise ton voyage</span>
+    <h1 style="margin:16px 0 18px; font-size:clamp(2.1rem,4.4vw,3.2rem);">Parlons de ton prochain road trip</h1>
+    <p class="lede">Décris-moi ton projet — je reviens vers toi sous 48h pour confirmer le pack adapté et démarrer la création de ton itinéraire.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="container">
+    <div class="grid-2" style="align-items:start; gap:60px;">
+      <form id="contact-form">
+        <div class="field-row">
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Ton prénom" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="ton@email.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="pack">Pack road trip souhaité (si applicable)</label>
+          <select id="pack" name="pack">
+            <option value="">Je ne sais pas encore / non concerné</option>
+            <option value="escapade">🌿 Escapade — 2 à 3 nuits — dès 59€</option>
+            <option value="road-break">🌅 Road Break — 4 à 5 nuits — dès 129€</option>
+            <option value="road-journey">🧭 Road Journey — 6 à 7 nuits — dès 199€</option>
+            <option value="odyssey">🌎 Odyssey — 8 à 15+ nuits — dès 399€</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="produit">E-book / guide souhaité (si applicable)</label>
+          <select id="produit" name="produit">
+            <option value="">Je ne sais pas encore / non concerné</option>
+            <option value="usa-essentials">USA Road Trip Essentials — 19€</option>
+            <option value="europe-gems">Europe Hidden Gems — 15€</option>
+            <option value="notion-planner">Travel Planner Notion — 12€</option>
+            <option value="premier-roadtrip">Premier Road Trip, Mode d'Emploi — 12€</option>
+            <option value="italie-van">Italie en Van : Itinéraire Liberté — 17€</option>
+            <option value="pack-evasion">Le Pack Évasion — 39€</option>
+            <option value="guide-sur-mesure">Guide 100% personnalisé — dès 35€</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="destination">Destination envisagée</label>
+            <input type="text" id="destination" name="destination" placeholder="USA, Italie, Portugal...">
+          </div>
+          <div class="field">
+            <label for="dates">Période envisagée</label>
+            <input type="text" id="dates" name="dates" placeholder="Ex : Mai 2027">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Parle-moi de ton projet</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tes envies, ton rythme, ton budget approximatif, tes inspirations..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Envoyer ma demande</button>
+        <p id="form-confirm" style="display:none; margin-top:16px; color:var(--navy); font-weight:600;">✓ Merci ! Ta demande a bien été envoyée, je reviens vers toi sous 48h.</p>
+      </form>
+
+      <div>
+        <div class="pillar-card" style="margin-bottom:24px;">
+          <h3 style="margin-bottom:14px;">Pourquoi ce questionnaire ?</h3>
+          <p style="color:var(--ink-soft); font-size:0.95rem;">Plus tu m'en dis, plus ton itinéraire sera précis dès la première version. Ce premier échange me permet de cerner ton rythme de voyage et tes envies réelles, avant même la création.</p>
+        </div>
+        <div class="pillar-card" style="margin-bottom:24px;">
+          <h3 style="margin-bottom:14px;">Délai de réponse</h3>
+          <p style="color:var(--ink-soft); font-size:0.95rem;">Je réponds sous 48h ouvrées pour confirmer le pack, le tarif exact et les prochaines étapes.</p>
+        </div>
+        <div class="pillar-card">
+          <h3 style="margin-bottom:14px;">Autres canaux</h3>
+          <p style="color:var(--ink-soft); font-size:0.95rem; margin-bottom:10px;">📩 <a href="mailto:goevasiotravel@gmail.com">goevasiotravel@gmail.com</a></p>
+          <p style="color:var(--ink-soft); font-size:0.95rem;">📷 <a href="https://instagram.com/goevasiotravel" target="_blank" rel="noopener">Instagram @goevasiotravel</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-sable section-tight">
+  <div class="container center" style="max-width:600px;">
+    <h2 style="margin-bottom:14px;">Pas encore prêt·e à écrire ?</h2>
+    <p class="lede center" style="margin:0 auto 26px;">Jette d'abord un œil au détail des 4 packs, ou aux e-books si tu préfères organiser ton voyage toi-même.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="offres.html" class="btn btn-ghost">Voir les offres</a>
+      <a href="ebooks.html" class="btn btn-ghost">Voir les e-books</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Go Evasio</div>
+        <p style="font-size:0.88rem; color:#b8c4d1; max-width:30ch;">Road trips & itinéraires sur mesure. USA · Europe · expériences authentiques.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="offres.html">Offres</a></li>
+          <li><a href="qui-suis-je.html">Qui suis-je ?</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Packs</h4>
+        <ul>
+          <li><a href="offres.html#escapade">Escapade</a></li>
+          <li><a href="offres.html#road-break">Road Break</a></li>
+          <li><a href="offres.html#road-journey">Road Journey</a></li>
+          <li><a href="offres.html#odyssey">Odyssey</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:goevasiotravel@gmail.com">goevasiotravel@gmail.com</a></li>
+          <li><a href="https://instagram.com/goevasiotravel" target="_blank" rel="noopener">Instagram @goevasiotravel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Go Evasio. Tous droits réservés.</span>
+      <span><a href="cgv.html" style="color:#9fb0c2;">CGV</a> · Créatrice de road trips sur mesure</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var pack = params.get('pack');
+  if (pack) {
+    var select = document.getElementById('pack');
+    if (select) select.value = pack;
+  }
+  var produit = params.get('produit');
+  if (produit) {
+    var selectProduit = document.getElementById('produit');
+    if (selectProduit) selectProduit.value = produit;
+  }
+  var form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('form-confirm').style.display = 'block';
+      form.reset();
+    });
+  }
+</script>
+</body>
+</html>
