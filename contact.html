@@ -8,54 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-  
-<script>
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-  event.preventDefault();
-
-  const form = event.currentTarget;
-  const button = form.querySelector('button[type="submit"]');
-  const confirmation = document.getElementById('form-confirm');
-
-  button.disabled = true;
-  button.textContent = 'Envoi en cours...';
-  confirmation.style.display = 'none';
-
-  try {
-    const response = await fetch('/contact.html', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: new URLSearchParams(new FormData(form)).toString()
-    });
-
-    if (!response.ok) {
-      throw new Error('Erreur HTTP ' + response.status);
-    }
-
-    form.reset();
-form.style.display = 'none';
-
-const message = document.createElement('div');
-message.setAttribute('role', 'status');
-message.style.cssText = 'padding:30px; background:#eef6ef; border:1px solid #b7d9be; border-radius:14px; color:#245b35; text-align:center; line-height:1.7;';
-
-message.innerHTML = `
-  <div style="font-size:38px; margin-bottom:12px;">✓</div>
-  <h2 style="margin-bottom:12px;">Ta demande est bien envoyée !</h2>
-  <p>Merci pour ta confiance ! 🌍</p>
-  <p>J'ai bien reçu ton projet de voyage et je reviendrai vers toi sous 48h ouvrées.</p>
-  <p>À très vite,<br><strong>Go Evasio Travel</strong></p>
-`;
-
-form.insertAdjacentElement('afterend', message);
-    console.error(error);
-  } finally {
-    button.disabled = false;
-  }
-});
-</script>
 <body>
 
 <header class="site-header">
@@ -89,9 +41,7 @@ form.insertAdjacentElement('afterend', message);
 <section class="bg-white">
   <div class="container">
     <div class="grid-2" style="align-items:start; gap:60px;">
-<p id="form-confirm" role="status" aria-live="polite" style="display:none; margin-top:20px; padding:18px; background:#e8f5e9; color:#256029; border-radius:10px; font-weight:600;">
-  ✓ Merci pour ta demande ! Elle a bien été envoyée. Je reviens vers toi sous 48h ouvrées pour discuter de ton projet de voyage. 🌍
-</p>
+      <form id="contact-form" name="demande-voyage" method="POST" action="/contact.html" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="demande-voyage">
         <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
         <div class="field-row">
@@ -147,8 +97,14 @@ form.insertAdjacentElement('afterend', message);
         </div>
 
         <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Envoyer ma demande</button>
-        <p id="form-confirm" style="display:none; margin-top:16px; color:var(--navy); font-weight:600;">✓ Merci ! Ta demande a bien été envoyée, je reviens vers toi sous 48h.</p>
       </form>
+      <div id="form-confirm" role="status" aria-live="polite" tabindex="-1" style="display:none; padding:30px; background:#eef6ef; border:1px solid #b7d9be; border-radius:14px; color:#245b35; text-align:center; line-height:1.7;">
+        <div style="font-size:38px; margin-bottom:12px;">✓</div>
+        <h2 style="margin-bottom:12px;">Ta demande a bien été envoyée !</h2>
+        <p>Merci pour ta confiance ! 🌍</p>
+        <p>Je reviendrai vers toi sous 48h ouvrées pour discuter de ton projet de voyage.</p>
+        <p>À très vite, <strong>Go Evasio Travel</strong></p>
+      </div>
 
       <div>
         <div class="pillar-card" style="margin-bottom:24px;">
@@ -234,6 +190,40 @@ form.insertAdjacentElement('afterend', message);
     if (selectProduit) selectProduit.value = produit;
   }
 
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+  const confirmation = document.getElementById('form-confirm');
+  if (!form || !confirmation) return;
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    const button = form.querySelector('button[type="submit"]');
+    if (button.disabled) return;
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+
+    try {
+      const response = await fetch('/contact.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+      if (!response.ok) throw new Error('Erreur HTTP ' + response.status);
+
+      form.reset();
+      form.style.display = 'none';
+      confirmation.style.display = 'block';
+      confirmation.focus();
+    } catch (error) {
+      console.error('Erreur envoi formulaire :', error);
+      alert("La demande n'a pas pu être confirmée. Vérifie ta connexion et réessaie, ou écris à goevasiotravel@gmail.com.");
+      button.disabled = false;
+      button.textContent = 'Envoyer ma demande';
+    }
+  });
+});
 </script>
 </body>
 </html>
