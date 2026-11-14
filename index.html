@@ -207,6 +207,29 @@
   </div>
 </section>
 
+<!-- Newsletter Go Evasio Travel : inscription volontaire -->
+<section class="bg-sable" id="newsletter" aria-labelledby="newsletter-title">
+  <div class="container" style="max-width:780px; padding-top:22px; padding-bottom:22px;">
+    <div style="background:#fffaf5; border:1px solid #ead8cb; border-radius:22px; padding:clamp(22px,5vw,44px); text-align:center;">
+      <span class="eyebrow">La newsletter Go Evasio</span>
+      <h2 id="newsletter-title" style="margin:14px 0;">Une dose d’évasion dans ta boîte mail ✈️</h2>
+      <p>Inspirations de voyage, conseils pour préparer tes escapades et actualités de mes futurs e-books. Sans spam, et tu peux te désinscrire à tout moment.</p>
+      <form name="newsletter-go-evasio" method="POST" action="/newsletter-merci.html" data-netlify="true" netlify-honeypot="bot-field" style="text-align:left; max-width:490px; margin:26px auto 0;">
+        <input type="hidden" name="form-name" value="newsletter-go-evasio">
+        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <label for="newsletter-email" style="display:block; font-weight:600; margin-bottom:7px;">Ton adresse e-mail</label>
+        <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="tonemail@exemple.com" style="box-sizing:border-box; width:100%; padding:14px; border:1px solid #cbb8ad; border-radius:12px; font:inherit; margin-bottom:15px;">
+        <label style="display:flex; align-items:flex-start; gap:10px; font-size:0.85rem; line-height:1.55; cursor:pointer;">
+          <input type="checkbox" name="consentement_newsletter" value="oui" required style="margin-top:5px; flex-shrink:0;">
+          <span>J’accepte de recevoir par e-mail la newsletter de Go Evasio Travel (inspirations, conseils, nouveautés et offres). Je peux me désinscrire à tout moment. <a href="confidentialite.html">Politique de confidentialité</a>.</span>
+        </label>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px; width:100%; cursor:pointer;">Je m’inscris à la newsletter</button>
+      </form>
+      <p style="font-size:0.76rem; margin-top:15px;">L’inscription est gratuite et indépendante de toute commande.</p>
+    </div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -242,7 +265,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Go Evasio. Tous droits réservés.</span>
-      <span><a href="cgv.html" style="color:#9fb0c2;">CGV</a> · Créatrice de road trips sur mesure</span>
+      <span><a href="cgv.html" style="color:#9fb0c2;">CGV</a> · <a href="confidentialite.html" style="color:#9fb0c2;">Confidentialité</a> · Créatrice de road trips sur mesure</span>
     </div>
   </div>
 </footer>
