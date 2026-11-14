@@ -35,11 +35,21 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     }
 
     form.reset();
-    confirmation.style.display = 'block';
-    button.textContent = 'Envoyer ma demande';
-  } catch (error) {
-    alert("L'envoi a échoué. Merci de réessayer ou de nous contacter par e-mail.");
-    button.textContent = 'Envoyer ma demande';
+form.style.display = 'none';
+
+const message = document.createElement('div');
+message.setAttribute('role', 'status');
+message.style.cssText = 'padding:30px; background:#eef6ef; border:1px solid #b7d9be; border-radius:14px; color:#245b35; text-align:center; line-height:1.7;';
+
+message.innerHTML = `
+  <div style="font-size:38px; margin-bottom:12px;">✓</div>
+  <h2 style="margin-bottom:12px;">Ta demande est bien envoyée !</h2>
+  <p>Merci pour ta confiance ! 🌍</p>
+  <p>J'ai bien reçu ton projet de voyage et je reviendrai vers toi sous 48h ouvrées.</p>
+  <p>À très vite,<br><strong>Go Evasio Travel</strong></p>
+`;
+
+form.insertAdjacentElement('afterend', message);
     console.error(error);
   } finally {
     button.disabled = false;
