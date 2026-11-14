@@ -1,0 +1,10 @@
+INSTALLATION — NEWSLETTER GO EVASIO TRAVEL
+
+1. Dans GitHub, remplacer index.html par le contenu du fichier index-newsletter.html (renommer en index.html).
+2. Ajouter newsletter-merci.html à la racine du dépôt.
+3. Ajouter confidentialite.html à la racine si ce n'est pas déjà fait.
+4. Déployer sur Netlify et vérifier dans Site configuration > Forms que la détection des formulaires est activée.
+5. Faire un test avec une adresse e-mail de test sur le site déployé, puis vérifier la soumission dans Netlify Forms.
+6. Avant d'envoyer des newsletters : configurer un outil d'e-mailing (ex. Brevo), un lien de désinscription fonctionnel, une preuve de consentement et idéalement une confirmation par double opt-in.
+
+ATTENTION : ce formulaire collecte des inscriptions, il n'envoie PAS de newsletters et n'effectue PAS de double opt-in. Ne pas importer automatiquement ces contacts dans un outil d'envoi sans mettre en place un flux conforme. La politique de confidentialité doit décrire les outils effectivement utilisés. Le fichier index-newsletter.html n'écrase pas les autres pages.
