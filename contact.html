@@ -8,6 +8,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
+  
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const button = form.querySelector('button[type="submit"]');
+  const confirmation = document.getElementById('form-confirm');
+
+  button.disabled = true;
+  button.textContent = 'Envoi en cours...';
+  confirmation.style.display = 'none';
+
+  try {
+    const response = await fetch('/contact.html', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new URLSearchParams(new FormData(form)).toString()
+    });
+
+    if (!response.ok) {
+      throw new Error('Erreur HTTP ' + response.status);
+    }
+
+    form.reset();
+    confirmation.style.display = 'block';
+    button.textContent = 'Envoyer ma demande';
+  } catch (error) {
+    alert("L'envoi a échoué. Merci de réessayer ou de nous contacter par e-mail.");
+    button.textContent = 'Envoyer ma demande';
+    console.error(error);
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
 <body>
 
 <header class="site-header">
