@@ -8,7 +8,23 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Dancing+Script:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
-<meta content="Découvre les futurs guides Go Evasio Travel : New York, road trip en Jordanie et premier road trip aux États-Unis. Des conseils concrets pour préparer ton voyage à ton rythme." name="description"/><link href="https://www.goevasiotravel.com/ebooks.html" rel="canonical"/></head>
+<meta content="Découvre les futurs guides Go Evasio Travel : New York, Jordanie et road trip pop culture dans le Sud des États-Unis, de la Géorgie à la Floride." name="description"/><link href="https://www.goevasiotravel.com/ebooks.html" rel="canonical"/><style>
+/* Couvertures des guides : styles limités à la page E-books */
+.ebook-collection{align-items:stretch}
+.ebook-collection .pack-card{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.ebook-cover{position:relative;height:240px;overflow:hidden;background:#c98d76}
+.ebook-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ebook-collection .pack-card:hover .ebook-cover img{transform:scale(1.035)}
+.ebook-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 28%,rgba(45,24,22,.70) 100%);pointer-events:none}
+.ebook-cover-label{position:absolute;left:20px;bottom:20px;right:20px;color:white;z-index:1;font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:600;line-height:1.18;text-shadow:0 1px 8px #0005}
+.ebook-card-content{padding:25px 24px 28px;display:flex;flex-direction:column;flex:1}
+.ebook-card-content .duration{margin-bottom:14px}
+.ebook-card-content .desc{margin-bottom:15px}
+.ebook-card-content ul{margin-bottom:24px}
+.ebook-card-content .btn{margin-top:auto;text-align:center}
+.ebook-note{font-size:.82rem;color:var(--ink-soft);margin-top:12px;text-align:center}
+@media(max-width:650px){.ebook-cover{height:230px}.ebook-cover-label{font-size:1.5rem}}
+</style></head>
 <body>
 <header class="site-header">
 <div class="container nav-row">
@@ -35,8 +51,7 @@
 <div class="hero-content">
 <span class="eyebrow">Les futurs guides Go Evasio</span>
 <h1 style="margin:16px 0 18px;">Tes prochaines aventures commencent ici.</h1>
-<p class="lede">New York, Jordanie, road trips aux États-Unis… Je prépare des guides pratiques pour t’aider à organiser tes voyages à ton rythme, avec des idées d’itinéraires, des conseils concrets et mes expériences personnelles.</p>
-
+<p class="lede">New York, Jordanie, Sud des États-Unis… Je prépare trois guides inspirés de mes voyages, avec des itinéraires concrets, des conseils pratiques et des expériences qui sortent de l’ordinaire.</p>
 <div class="hero-cta-row"><a class="btn btn-primary" href="#catalogue">Découvrir les guides à venir</a></div></div>
 <div class="hero-visual">
 <svg preserveaspectratio="xMidYMid slice" viewbox="0 0 420 520">
@@ -79,9 +94,9 @@
 <section class="bg-sable" id="catalogue">
 <div class="container">
 <span class="eyebrow">Catalogue</span>
-<h2 style="margin:14px 0 12px;">Les 3 premiers guides en préparation</h2>
-<p class="lede" style="margin-bottom:50px;">Voici les premiers thèmes que je souhaite développer. Les contenus, formats et tarifs seront précisés au lancement.</p>
-<div class="grid-3"><div class="pack-card"><span class="duration">Escapade urbaine · En préparation</span><h3>New York, à ton rythme</h3><p class="desc">Des quartiers emblématiques aux lieux de tournage, en passant par les activités gratuites et les balades : un futur guide pour explorer New York sans courir.</p><ul><li>Idées de parcours sur 5 à 7 jours</li><li>Transports et déplacements</li><li>Lieux de tournage et expériences originales</li><li>Conseils budget et organisation</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a></div><div class="pack-card"><span class="duration">Road trip découverte · En préparation</span><h3>Jordanie, l’aventure en road trip</h3><p class="desc">Un projet de guide pour relier Amman, Pétra, Wadi Rum et la mer Morte, en préparant des étapes réalistes et des moments forts.</p><ul><li>Exemple d’itinéraire sur 7 à 10 jours</li><li>Étapes et temps de trajet</li><li>Budget et conseils pratiques</li><li>Points d’attention avant de partir</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a></div><div class="pack-card"><span class="duration">Guide pratique · En préparation</span><h3>Mon premier road trip aux USA</h3><p class="desc">Tout ce qu’il faut anticiper pour prendre la route aux États-Unis avec plus de sérénité : formalités, voiture, budget et organisation.</p><ul><li>Préparer son budget</li><li>Location de voiture et assurances</li><li>Hébergements et étapes</li><li>Checklist avant le départ</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a></div></div>
+<h2 style="margin:14px 0 12px;">Trois guides, trois aventures à venir</h2>
+<p class="lede" style="margin-bottom:50px;">Trois destinations, trois façons de voyager. Ces guides sont encore en préparation : les contenus définitifs, tarifs et dates de sortie seront annoncés plus tard.</p>
+<div class="grid-3 ebook-collection"><article class="pack-card"><div class="ebook-cover"><img alt="Illustration de New York au coucher du soleil" decoding="async" loading="lazy" src="ebook-new-york.jpg"/><span class="ebook-cover-label">New York</span></div><div class="ebook-card-content"><span class="duration">City trip · En préparation</span><h3>New York, à ton rythme</h3><p class="desc">Une ville que j’aime explorer à pied, quartier après quartier. Dans ce futur guide, je partagerai mes balades favorites, des expériences originales et des lieux emblématiques de la pop culture, pour vivre New York à ton rythme plutôt que de courir d’une attraction à l’autre.</p><ul><li>Balades à Manhattan et Brooklyn, quartiers et points de vue</li><li>Lieux de tournage, notamment autour de Gossip Girl et Friends</li><li>Activités gratuites, transports et conseils pour maîtriser son budget</li><li>Idées d’itinéraires pour un séjour de 5 à 7 jours</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a><p class="ebook-note">Guide en préparation · Aucun achat possible actuellement</p></div></article><article class="pack-card"><div class="ebook-cover"><img alt="Illustration de Pétra en Jordanie" decoding="async" loading="lazy" src="ebook-jordanie.jpg"/><span class="ebook-cover-label">Jordanie</span></div><div class="ebook-card-content"><span class="duration">Road trip · En préparation</span><h3>Jordanie — L’aventure en road trip</h3><p class="desc">De Pétra aux paysages du Wadi Rum, la Jordanie est une destination qui se vit pleinement sur la route. Je prépare un carnet inspiré de mon propre voyage, avec des étapes réalistes, des conseils d’organisation et mes impressions pour t’aider à imaginer ton aventure.</p><ul><li>Amman, Pétra et les paysages du désert du Wadi Rum</li><li>Étapes possibles autour de la mer Morte</li><li>Organisation des trajets, durée et budget à prévoir</li><li>Conseils et retours d’expérience personnelle</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a><p class="ebook-note">Guide en préparation · Aucun achat possible actuellement</p></div></article><article class="pack-card"><div class="ebook-cover"><img alt="Illustration d’une rue arborée du Sud des États-Unis" decoding="async" loading="lazy" src="ebook-southern-usa.jpg"/><span class="ebook-cover-label">Southern USA</span></div><div class="ebook-card-content"><span class="duration">Géorgie &amp; Floride · En préparation</span><h3>Southern USA — Road Trip Pop Culture</h3><p class="desc">Et si ton road trip suivait les décors de tes séries préférées ? De la Géorgie à la Floride, je retracerai notre aventure d’Atlanta à Miami, entre les lieux de tournage de The Vampire Diaries, Stranger Things et The Walking Dead, les parcs Universal Orlando et notre passion pour l’univers Harry Potter.</p><ul><li>Atlanta, Covington, Jackson, Savannah, Orlando et Miami</li><li>Sur les traces de The Vampire Diaries, Stranger Things et The Walking Dead</li><li>Universal Orlando et les espaces consacrés à Harry Potter</li><li>Étapes du voyage, anecdotes, coups de cœur et conseils pratiques</li></ul><a class="btn btn-primary center" href="contact.html">Être informé du lancement</a><p class="ebook-note">Guide en préparation · Aucun achat possible actuellement</p></div></article></div><p style="font-size:.83rem;color:var(--ink-soft);margin-top:20px;text-align:center;">Visuels d’ambiance illustratifs créés pour présenter les futurs guides ; ils ne sont pas des photographies de mes voyages.</p>
 </div>
 </section>
 <!-- GUIDE SUR MESURE -->
@@ -130,8 +145,8 @@
 <div class="container">
 <div class="cta-band" style="background:var(--navy);">
 <div>
-<h2>Une question avant d'acheter ?</h2>
-<p>Écris-moi, je te réponds sous 48h pour t'aider à choisir le bon guide.</p>
+<h2>Une question sur les futurs guides ?</h2>
+<p>Tu veux en savoir plus sur un guide ou me parler de ton prochain voyage ? Écris-moi !</p>
 </div>
 <a class="btn btn-light" href="contact.html">Me contacter</a>
 </div>
